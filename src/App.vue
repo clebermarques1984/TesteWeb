@@ -1,12 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="container">
+    <app-header></app-header>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import Header from '@/layouts/Layout.vue';
+import { Component } from 'vue-property-decorator';
+// import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+
+@Component({
+  components: {
+    'app-header': Header,
+  },
+})
+export default class App extends Vue {
+}
+</script>
+
 
 <style>
 #app {

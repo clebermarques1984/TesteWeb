@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "esnext",
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -18,7 +18,12 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "lib": [
+      "es5",
+      "dom",
+      "es2015",
+    ],
   },
   "include": [
     "src/**/*.ts",
